@@ -1,0 +1,31 @@
+.Cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    margin-left: 25px;
+}
+
+.Cards-container-secundary{
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+@media(max-width:768px){
+   .Cards-container{
+       display: flex;
+        margin-bottom: 20px;
+   }
+   .Cards-container-secundary{
+        padding-bottom: 20px;
+   }
+  }

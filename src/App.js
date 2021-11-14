@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import Cards from './Components/Cards/Cards';
+import FixedCard from './Components/FixedCard/FixedCard'
+import SearchBar from './Components/SearchaBar/SearchBar';
 import './App.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App-container">
+    <div className="search-container">  
+       
+        <div > 
+          <Routes>
+              <Route path="/*" element={<SearchBar />} />
+          </Routes>
+        </div>
+        <div>
+          <Cards />
+        </div>
+      </div>
+      <div>
+        <FixedCard />
+      </div> 
+      
+        
+  </div>
+
   );
 }
 
 export default App;
+
+
+
