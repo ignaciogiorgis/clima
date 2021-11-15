@@ -9,7 +9,7 @@ import '../Styles/Cards.css';
 const Cards = () => {
   
     const arrayCities = useSelector(state=> state.all);
-  
+    
 
     return( 
         <div className="Cards-container">

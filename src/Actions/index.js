@@ -1,4 +1,13 @@
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+
+
+
+
 
 
 export const GET_CITY = "GET_CITY";
@@ -9,7 +18,7 @@ export function getCity(cities) {
     
     return async function (dispatch) {
       try {
-        let json = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=2bd6d4631caa66965bec173759c72185`);
+        let json = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=${API_KEY}`);
         return dispatch({
           type: GET_CITY,
           payload: json.data,
@@ -24,8 +33,7 @@ export function getCity(cities) {
   export function getMedellin() {
     return async function (dispatch) {
       try {
-        let resultado = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=medellin&APPID=2bd6d4631caa66965bec173759c72185`);
-        console.log('acition1', resultado.data)
+        let resultado = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=medellin&APPID=${API_KEY}`);
         return dispatch({
           type: GET_MEDELLIN,
           payload: resultado.data,

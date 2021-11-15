@@ -15,7 +15,6 @@ const FixedCard = () => {
       },[])
       
       const medellinFixed = useSelector(state => state.medellin)
-      console.log('component',medellinFixed);
       
       
       return (
