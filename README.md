@@ -6,7 +6,7 @@ Para poder ejecutar esta aplicacion tiene que :
 
  npm install
  
-2)Crea un archivo llamandolo .env y dentro del mismo copia esta linea, es la api key para poder probar la funcionalidad 
+2)Crea un archivo en la carpeta clima llamandolo .env y dentro del mismo copia esta linea, es la api key para poder probar la funcionalidad 
 
 REACT_APP_WEATHER_API_KEY=2bd6d4631caa66965bec173759c72185
 
